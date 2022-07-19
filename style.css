@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+body {
+  background-image: url("https://images7.alphacoders.com/123/thumb-1920-1233046.png");
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #fff;
+  background-color: #63baab;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+header {
+  padding: 2rem 1rem;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header h1 {
+  padding: 50px 0px;
+  font-size: 3.5rem;
+  color: #00636c;
+  text-align: center;
+}
+
+.task-form {
+  display: flex;
+}
+
+input {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+#input-new-task {
+  width: 80%;
+  background-color: #4c8077;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  color: #c4fcf1;
+  font-size: 2rem;
+}
+
+#input-new-task::placeholder {
+  color: #d5e5ee;
+  opacity: 0.4;
+}
+
+#add-new-task {
+  width: 20%;
+  border: none;
+  border-radius: 1rem;
+  background-color: #4c8077;
+  font-size: 25px;
+  color: aqua;
+  cursor: pointer;
+}
+
+#add-new-task:hover {
+  opacity: 0.8;
+}
+
+#add-new-task:active {
+  opacity: 0.6;
+}
+
+main {
+  padding: 2rem 1rem;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tasks {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.tasks .task {
+  display: flex;
+  width: 100%;
+  margin: 1rem 0px;
+}
+.task .content {
+  background-color: #4c8077;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  color: #c4fcf1;
+  flex: 1 1 0%;
+}
+
+.task .content .txt {
+  font-size: 2rem;
+  width: 100%;
+  display: block;
+  transition: 0.4s;
+}
+
+.task .content .txt:not(:read-only) {
+  color: #dff8d5;
+}
+
+.options {
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+}
+
+.options button {
+  border: none;
+  border-radius: 1rem;
+  background-color: #4c8077;
+  font-size: 25px;
+  cursor: pointer;
+  background: none;
+  text-decoration: underline;
+}
+
+.task .options button:hover {
+  opacity: 0.8;
+}
+
+.task .options button:active {
+  opacity: 0.6;
+}
+
+.edit {
+  color: #c4c43d;
+}
+
+.delete {
+  color: #5c0000;
+}
+
+.done {
+  color: #00793f;
+}
+
+@media screen and (max-width: 700px) {
+  header {
+    padding: 0.5rem 1rem;
+  }
+  header h1 {
+    font-size: 2rem;
+    padding: 30px 0px;
+  }
+
+  #input-new-task {
+    padding: 0.7rem;
+
+    margin-right: 1rem;
+
+    font-size: 1rem;
+  }
+  #add-new-task {
+    font-size: 10px;
+  }
+
+  main {
+    padding: 0.5rem 1rem;
+  }
+
+  .tasks .task {
+    margin: 0.5rem 0px;
+    background-color: #4c8077;
+    border-radius: 1rem;
+  }
+
+  .task .content {
+    padding: 0.7rem;
+  }
+
+  .task .content .txt {
+    font-size: 1rem;
+  }
+  .options {
+    padding: 0 8px;
+    width: 35%;
+  }
+  .options button {
+    font-size: 10px;
+    cursor: pointer;
+  }
+  .done {
+    color: #0d422a;
+  }
+}
